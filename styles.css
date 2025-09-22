@@ -1,0 +1,257 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e0f7fa; /* Fondo celeste claro */
+    color: #333; /* Color de texto */
+
+    background-color: #e0f7fa; /* Color celeste de fondo */
+    background-image: url('images/imagen1.jpg'), 
+                      url('images/imagen2.jpg'), 
+                      url('images/imagen3.jpg'), 
+                      url('images/imagen4.jpg');
+    background-size: cover; /* Asegúrate de que las imágenes cubran toda la página */
+    background-position: center; /* Centra las imágenes */
+    background-repeat: no-repeat; /* Evita que las imágenes se repitan */
+}
+
+
+
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #0097a7; /* Celeste más oscuro */
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de la sección hero */
+.hero {
+    background-image: url('images/imagen1.jpg'), 
+                      url('images/imagen2.jpg'), 
+                      url('images/imagen3.jpg'), 
+                      url('images/imagen4.jpg'),
+                      url('images/imagen5.jpg');
+
+    background-size: cover;
+    background-position: center;
+    animation: slide 20s infinite; /* Cambia la imagen cada 20 segundos */
+    text-align: center;
+    padding: 4rem 0;
+    color: white;
+    background-color: #80deea; /* Fondo celeste */
+    text-align: center;
+    padding: 4rem 0;
+}
+@keyframes slide {
+    0% { background-image: url('images/imagen1.jpg'); }
+    25% { background-image: url('images/imagen2.jpg'); }
+    50% { background-image: url('images/imagen3.jpg'); }
+    75% { background-image: url('images/imagen4.jpg'); }
+    50%{ background-image: url('images/imagen5.jpg'); }
+
+}
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.hero h2, .hero h3, .hero p {
+    color: white; /* Color del texto */
+    text-shadow: 
+        2px 2px 0px black,   /* Sombra derecha */
+        -2px -2px 0px black, /* Sombra izquierda */
+        2px -2px 0px black,  /* Sombra arriba */
+        -px 2px 0px black;  /* Sombra abajo */
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Estilos de las secciones */
+section {
+    padding: 2rem;
+    background-color: #ffffff; /* Fondo blanco para secciones */
+    margin: 1rem auto; /* Margen automático para centrar */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    max-width: 800px; /* Ancho máximo */
+}
+
+#servicios ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#servicios ul li {
+    background-color: #4dd0e1; /* Fondo celeste para los servicios */
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Estilos del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+form button {
+    padding: 0.7rem;
+    background-color: #0097a7; /* Botón celeste */
+    color: white;
+    border: none;
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #00796b; /* Botón más oscuro al pasar el mouse */
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #0097a7; /* Fondo celeste del pie de página */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative; /* Asegura que el pie de página se posicione correctamente */
+    margin-top: 2rem; /* Espacio adicional antes del pie de página */
+}
+/* Estilos para la sección de blog */
+#blog {
+    padding: 2rem;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 1200px; /* Limita el ancho */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+#blog h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #0097a7; /* Color celeste del título */
+}
+
+/* Estilo para ocultar el contenido completo por defecto */
+.contenido-completo {
+    display: none;
+}
+
+.contenido-completo p {
+    margin-top: 1rem;
+    color: #333;
+}
+.proyecto video, 
+.proyecto iframe {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto */
+    margin-bottom: 1rem;
+}
+
+
+.articulos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.articulos article {
+    background-color: #e0f7fa; /* Fondo celeste claro */
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 30%; /* Cada artículo ocupará el 30% del ancho */
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.articulos article h3 {
+    color: #0097a7; /* Color celeste oscuro para los títulos de artículos */
+    margin-bottom: 0.5rem;
+}
+
+.articulos article p {
+    margin-bottom: 1rem;
+    color: #333; /* Texto en gris oscuro */
+}
+
+.articulos article a {
+    text-decoration: none;
+    color: #00796b; /* Enlace en verde oscuro */
+    font-weight: bold;
+}
+
+.articulos article a:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
+
+.redes-sociales {
+    margin-top: 1rem;
+}
+
+.redes-sociales h3 {
+    margin: 0.5rem 0;
+}
+
+.redes-sociales ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+}
+
+.redes-sociales ul li {
+    margin: 0 1rem;
+}
+
+.redes-sociales ul li a {
+    text-decoration: none;
+    color: #ffffff; /* Color celeste para los enlaces */
+}
+
+.redes-sociales ul li a:hover {
+    text-decoration: underline; /* Subraya al pasar el mouse */
+}
