@@ -1,63 +1,169 @@
+/* Estilos generales */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  line-height: 1.6;
-  background: url("imagenes/fondo-de-pared-de-ladrillo-rojo-marron.jpg") no-repeat center center fixed;
-  background-size: cover;
-  transition: background-color 0.5s, color 0.5s;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    transition: background-color 0.5s, color 0.5s;
+    background: url("imagenes/fondo-de-pared-de-ladrillo-rojo-marron.jpg") no-repeat center center fixed;
+    background-size: cover;
 }
 
-.hero {
-  text-align: center;
-  padding: 4rem 0;
-  color: white;
+/* Header */
+header {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid;
+    transition: background-color 0.5s, color 0.5s, border-color 0.5s;
+    background: rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+header img {
+    height: 60px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding-left: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    transition: color 0.5s;
+    font-weight: bold;
+}
+
+/* Botón de tema */
+#themeSwitcher {
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    margin-top: 0.5rem;
+    z-index: 1000;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.6rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#themeSwitcher:hover {
+    background-color: #004d40;
+}
+
+/* Temas */
+.theme-light { color: #222; }
+.theme-light nav a { color: #fff; }
+.theme-warm { color: #f1e1d0; font-family: 'Georgia', serif; }
+.theme-warm nav a { color: #ffd7a1; }
+.theme-green { color: #a2f5a2; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+.theme-green nav a { color: #7ce77c; }
+
+/* Secciones */
+section {
+    padding: 2rem;
+    border-bottom: 1px solid currentColor;
+    transition: border-color 0.5s;
+    max-width: 900px;
+    margin: auto;
+    background: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    color: #fff;
+}
+
+/* Galería */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
 }
 
 .galeria img {
-  max-width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
+/* Formulario contacto */
 #contacto form {
-  background: rgba(0,0,0,0.6);
-  padding: 1rem;
-  border-radius: 10px;
-  max-width: 500px;
-  margin: auto;
-  color: white;
+    background: rgba(0,0,0,0.6);
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+    color: white;
 }
 
 #contacto input, #contacto textarea {
-  width: 100%;
-  padding: 0.8rem;
-  margin: 0.5rem 0;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#contacto button[type="submit"] {
+    background-color: #ff0055;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 0.7rem;
+    cursor: pointer;
+}
+
+#contacto button[type="submit"]:hover {
+    background-color: #ff3366;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    padding: 1rem;
+    text-align: center;
+    color: #eee;
+    margin-top: 2rem;
+}
+
+.redes a {
+    margin: 0 1rem;
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.redes a:hover {
+    color: #ff0055;
 }
 
 /* Lámpara animada */
 .lampara-container {
-  position: fixed;
-  top: 20%;
-  left: -150px;
-  z-index: 500;
-  animation: moverLampara 6s infinite alternate ease-in-out, balancear 2s infinite alternate ease-in-out;
+    position: fixed;
+    top: 20%;
+    left: -150px;
+    z-index: 500;
+    animation: moverLampara 6s infinite alternate ease-in-out, balancear 2s infinite alternate ease-in-out;
 }
 
 @keyframes moverLampara {
-  0% { left: -150px; opacity: 0; }
-  50% { left: 50%; opacity: 1; }
-  100% { left: 100%; opacity: 0; }
+    0% { left: -150px; opacity: 0; }
+    50% { left: 50%; opacity: 1; }
+    100% { left: 100%; opacity: 0; }
 }
 
 @keyframes balancear {
-  0% { transform: translateY(0px) rotate(-5deg); }
-  50% { transform: translateY(10px) rotate(5deg); }
-  100% { transform: translateY(0px) rotate(-5deg); }
+    0% { transform: translateY(0px) rotate(-5deg); }
+    50% { transform: translateY(10px) rotate(5deg); }
+    100% { transform: translateY(0px) rotate(-5deg); }
 }
 
 .lampara {
-  height: 80px;
-  width: auto;
+    height: 80px;
+    width: auto;
 }
