@@ -110,25 +110,12 @@ footer {
   margin-top: 2rem;
 }
 
-/* Lámpara animada */
+/* Lampara fija al lado derecho */
 .lampara-container {
   position: fixed;
   top: 20%;
-  left: -150px;
+  right: 0; /* pegada al lado derecho */
   z-index: 500;
-  animation: moverLampara 6s infinite alternate ease-in-out, balancear 2s infinite alternate ease-in-out;
-}
-
-@keyframes moverLampara {
-  0% { left: -150px; opacity: 0; }
-  50% { left: 50%; opacity: 1; }
-  100% { left: 100%; opacity: 0; }
-}
-
-@keyframes balancear {
-  0% { transform: translateY(0px) rotate(-5deg); }
-  50% { transform: translateY(10px) rotate(5deg); }
-  100% { transform: translateY(0px) rotate(-5deg); }
 }
 
 .lampara {
