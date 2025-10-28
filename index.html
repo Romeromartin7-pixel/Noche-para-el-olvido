@@ -3,62 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OTRA NOCHE PARA EL OLVIDO</title>
+  <title>Otra Noche para el Olvido</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+  <!-- Encabezado -->
   <header>
-    <img src="imagenes/logo-blanco.png" alt="Logo de la productora">
+    <img src="imagenes/logo-blanco.png" alt="Logo de Beyond estudios">
     <nav>
       <ul>
-        <li><a href="#proyecto">El Proyecto</a></li>
-        <li><a href="#secuela">La Secuela</a></li>
+        <li><a href="#sinopsis">Sinopsis</a></li>
         <li><a href="#galeria">Galería</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
-    <button id="themeSwitcher" aria-label="Cambiar tema">Cambiar tema 🎨</button>
+    <button id="themeSwitcher" aria-label="Cambiar tema">🎨 Cambiar tema</button>
   </header>
 
+  <!-- Sección principal con el video -->
   <section class="hero">
-    <h2>NOCHE PARA EL OLVIDO</h2>
+    <h1>OTRA NOCHE PARA EL OLVIDO</h1>
     <div class="video-container">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/jtqRyV9jh10" frameborder="0" allowfullscreen></iframe>
+      <iframe 
+        width="100%" height="400"
+        src="https://www.youtube.com/embed/jtqRyV9jh10" 
+        title="Otra Noche para el Olvido (Cortometraje)" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
     </div>
   </section>
 
-  <section id="proyecto">
-    <h2>Storyline</h2>
-    <p>Debiendo cuidar la casa de su hermano por unos días, lo que parecía una dura jornada de estudio para Matías, se termina convirtiendo en una verdadera noche para el olvido.  </p>
-    <p>Acompaña a Mati a cuidar la casa de su hermano Nico donde el aburrimiento lo lleva a romper la confianza de su hermano. </p>
+  <!-- Sinopsis -->
+  <section id="sinopsis">
+    <h2>Sinopsis</h2>
+    <p>
+      Debiendo cuidar la casa de su hermano por unos días, lo que parecía una tranquila jornada de estudio 
+      para Matías se convierte en una verdadera noche para el olvido. 
+    </p>
+    <p>
+      Un corto sobre los límites de la confianza, la amistad y las consecuencias de nuestras decisiones.
+    </p>
   </section>
 
-  <section id="secuela">
-    <h2>Secuela en Producción</h2>
-    <p>Actualmente nos encontramos desarrollando la segunda parte, donde los hechos de la fiesta tendrán consecuencias inesperadas.</p>
-    <div class="video-container">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/WCEj8u3-27g" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
-
+  <!-- Galería -->
   <section id="galeria">
     <h2>Galería</h2>
     <div class="galeria">
-      <img src="imagenes/IMAGEN FLAT NICO Y MATI.png" alt="Inicio de la fiesta">
-      <img src="imagenes/logo-blanco.png" alt="Logo blanco">
-      <img src="imagenes/poster 1.jpg" alt="Poster 1">
-      <img src="imagenes/poster 2.png" alt="Poster 2">
+      <img src="imagenes/poster 1.jpg" alt="Poster del cortometraje">
+      <img src="imagenes/poster 2.png" alt="Poster alternativo">
+      <img src="imagenes/IMAGEN FLAT NICO Y MATI.png" alt="Nico y Mati durante la filmación">
+    </div>
 
-    <!-- Video de YouTube -->
-  <div class="video-galeria">
-    <iframe width="100%" height="180" src="https://www.youtube.com/embed/xqE_Ybayhdk" frameborder="0" allowfullscreen></iframe>
-  </div>
-</div>
+    <div class="video-galeria">
+      <iframe 
+        width="100%" height="180"
+        src="https://www.youtube.com/embed/xqE_Ybayhdk"
+        title="Detrás de cámaras - Otra Noche para el Olvido"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
   </section>
 
+  <!-- Contacto -->
   <section id="contacto">
     <h2>Contacto</h2>
+    <p>¿Querés comunicarte con el equipo o conocer más sobre el proyecto? Escribinos:</p>
+
     <form action="https://formspree.io/f/xqayzwey" method="POST">
       <label for="email">Tu correo:</label>
       <input type="email" id="email" name="email" required>
@@ -70,14 +85,17 @@
     </form>
   </section>
 
+  <!-- Pie de página -->
   <footer>
-    <p>&copy; 2024 - Página en construcción</p>
+    <p>&copy; 2025 — Otra Noche para el Olvido | Beyond estudios</p>
   </footer>
 
+  <!-- Lámpara decorativa -->
   <div class="lampara-container">
     <img src="imagenes/render-lampara.png" alt="Lámpara animada" class="lampara">
   </div>
 
+  <!-- Script de cambio de tema -->
   <script src="scripts.js"></script>
 </body>
 </html>
