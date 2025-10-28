@@ -46,7 +46,7 @@ nav a {
 
 /* Botón de cambio de tema */
 button#themeSwitcher {
-  position: relative; /* para que funcione en móvil */
+  position: relative;
   margin-top: 0.5rem;
   padding: 0.6rem 1rem;
   border: none;
@@ -55,7 +55,8 @@ button#themeSwitcher {
   color: white;
   font-weight: bold;
   cursor: pointer;
-  z-index: 600;
+  z-index: 1000;
+  touch-action: manipulation;
 }
 
 button#themeSwitcher:hover {
@@ -136,19 +137,23 @@ footer {
 .lampara {
   height: 120px;
   width: auto;
-  pointer-events: none;
+  transition: opacity 0.5s ease, filter 0.5s ease;
 }
 
-/* Móviles */
+/* Lámpara apagada */
+.lampara.apagada {
+  opacity: 0.3;
+  filter: brightness(50%);
+}
+
+/* Ajustes para móviles */
 @media (max-width: 768px) {
   .lampara-container {
     position: absolute;
     bottom: 20px;
     right: 50%;
     transform: translateX(50%);
-    z-index: 500;
   }
-
   .lampara {
     height: 80px;
   }
