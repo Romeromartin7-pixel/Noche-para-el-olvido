@@ -138,3 +138,15 @@ footer {
   height: 120px; /* agrandada */
   width: auto;
 }
+.instagram-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-left: 1rem; /* separa de otros elementos */
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.instagram-icon:hover {
+  transform: scale(1.1); /* efecto al pasar el mouse */
+}
