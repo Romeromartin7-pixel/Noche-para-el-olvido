@@ -151,8 +151,8 @@ footer {
   .lampara-container {
     position: absolute;
     bottom: 20px;
-    right: 50%;
-    transform: translateX(50%);
+    right: 20px; /* corregido para que no quede sobre la E */
+    transform: none;
   }
   .lampara {
     height: 80px;
