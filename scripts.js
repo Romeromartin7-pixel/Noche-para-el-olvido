@@ -1,29 +1,26 @@
-// Espera a que el DOM cargue
 document.addEventListener('DOMContentLoaded', () => {
-  // Temas disponibles: '' = fondo rojo por defecto, 'theme-green' = ladrillo luz verde
-  const themes = ['', 'theme-green'];
+  const themes = ['', 'theme-green']; // fondo rojo por defecto y verde alternativo
   let currentTheme = 0;
 
   const switcher = document.getElementById('themeSwitcher');
   const body = document.body;
 
-  // Función para aplicar un tema según índice
   function applyTheme(index) {
-    // Elimina todas las clases de tema excepto la por defecto
     body.classList.remove(...themes.filter(t => t !== ''));
     if (themes[index] !== '') {
-      body.classList.add(themes[index]); // agrega clase si no es el tema por defecto
+      body.classList.add(themes[index]);
     }
   }
 
-  // Cambia de tema al hacer clic en el botón
-  if (switcher) { // aseguramos que el botón existe
-    switcher.addEventListener('click', () => {
+  if (switcher) {
+    const changeTheme = () => {
       currentTheme = (currentTheme + 1) % themes.length;
       applyTheme(currentTheme);
-    });
+    };
+
+    switcher.addEventListener('click', changeTheme);
+    switcher.addEventListener('touchstart', changeTheme); // soporte móvil
   }
 
-  // Aplica el tema inicial
   applyTheme(currentTheme);
 });
