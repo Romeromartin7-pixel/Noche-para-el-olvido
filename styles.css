@@ -1,4 +1,4 @@
-/* Fondo general */
+/* Fondo general por defecto: ladrillos rojos */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,6 +6,13 @@ body {
   background: url("imagenes/fondo-de-pared-de-ladrillo-rojo-marron.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #fff;
+  transition: background 0.5s ease; /* cambio de tema suave */
+}
+
+/* Tema alternativo: ladrillos luz verde */
+body.theme-green {
+  background: url("imagenes/Pared ladrillos luz verde.png") no-repeat center center fixed;
+  background-size: cover;
 }
 
 /* Encabezado */
