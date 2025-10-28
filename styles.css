@@ -57,6 +57,7 @@ button#themeSwitcher {
   color: white;
   font-weight: bold;
   cursor: pointer;
+  z-index: 600; /* aseguramos que quede arriba de todo */
 }
 
 button#themeSwitcher:hover {
@@ -137,6 +138,7 @@ footer {
 .lampara {
   height: 120px; /* agrandada */
   width: auto;
+  pointer-events: none; /* para que no bloquee clicks */
 }
 
 /* Ajustes para móviles */
@@ -146,6 +148,7 @@ footer {
     bottom: 20px;
     right: 50%;
     transform: translateX(50%);
+    z-index: 500;
   }
 
   .lampara {
