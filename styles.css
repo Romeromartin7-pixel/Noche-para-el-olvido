@@ -88,6 +88,56 @@ section {
   object-fit: cover;
 }
 
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 250px;
+  gap: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+/* Todas las imágenes comparten este estilo base */
+.galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover */
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 100, 0.4);
+}
+
+/* Imagen fija */
+.galeria .fija {
+  grid-column: 2 / 3;  /* segunda columna */
+  grid-row: 1 / 3;     /* ocupa dos filas */
+  position: relative;
+  z-index: 2;
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+}
+
+.gallery img {
+  width: 250px;          /* tamaño base */
+  height: auto;
+  border-radius: 10px;   /* bordes suaves */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.1); /* agranda la imagen un 10% */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* agrega sombra */
+  z-index: 2;
+}
+
+
+
 /* Formularios */
 form {
   display: flex;
