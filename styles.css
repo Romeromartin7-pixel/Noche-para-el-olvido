@@ -25,10 +25,13 @@ header {
   position: relative;
 }
 
-header img {
-  height: 60px;
+header img[alt="logo-blanco"] {
   width: auto;
+  height: 60px; /* tamaño base */
+  transition: transform 0.3s ease;
+  transform: scale(1.55); /* agranda un 5% */
 }
+
 
 nav ul {
   list-style: none;
