@@ -28,12 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   applyTheme(currentTheme);
 
-document.addEventListener('DOMContentLoaded', () => {
+  // ---------------- LIGHTBOX ----------------
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
   const closeBtn = document.querySelector('.close');
 
-  document.querySelectorAll('.gallery img').forEach(img => {
+  // CORRECCIÓN: usar '.galeria img' en vez de '.gallery img'
+  document.querySelectorAll('.galeria img').forEach(img => {
     img.addEventListener('click', () => {
       lightbox.style.display = 'flex';
       lightboxImg.src = img.src;
@@ -50,4 +51,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-

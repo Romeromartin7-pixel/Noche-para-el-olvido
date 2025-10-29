@@ -77,19 +77,6 @@ section {
 /* Galería */
 .galeria {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-}
-
-.galeria img,
-.galeria iframe {
-  max-width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.galeria {
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 250px;
   gap: 10px;
@@ -104,50 +91,25 @@ section {
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
 }
 
-/* Efecto hover */
+/* Hover efecto */
 .galeria img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(0, 255, 100, 0.4);
+  z-index: 2;
 }
 
-/* Imagen fija */
+/* Imagen fija grande (ocupando dos filas y segunda columna) */
 .galeria .fija {
-  grid-column: 2 / 3;  /* segunda columna */
-  grid-row: 1 / 3;     /* ocupa dos filas */
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
   position: relative;
   z-index: 2;
   transform: scale(1.02);
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
-}
-
-.gallery img {
-  width: 250px;          /* tamaño base */
-  height: auto;
-  border-radius: 10px;   /* bordes suaves */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.gallery img:hover {
-  transform: scale(1.1); /* agranda la imagen un 10% */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* agrega sombra */
-  z-index: 2;
-}
-/* Efecto de agrandamiento (ya lo tenés, lo dejamos) */
-.gallery img {
-  width: 250px;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.gallery img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  z-index: 2;
 }
 
 /* ----- LIGHTBOX ----- */
@@ -191,7 +153,6 @@ section {
 .close:hover {
   color: #ccc;
 }
-
 
 /* Formularios */
 form {
@@ -256,7 +217,7 @@ footer {
   .lampara-container {
     position: absolute;
     bottom: 20px;
-    right: 20px; /* corregido para que no quede sobre la E */
+    right: 20px;
     transform: none;
   }
   .lampara {
