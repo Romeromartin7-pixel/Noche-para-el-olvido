@@ -51,3 +51,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+// ----- VER MÁS / VER MENOS -----
+document.addEventListener('DOMContentLoaded', () => {
+  const verMasBtn = document.getElementById('verMasBtn');
+  const galeriaExtendida = document.getElementById('galeriaExtendida');
+
+  if (verMasBtn && galeriaExtendida) {
+    verMasBtn.addEventListener('click', () => {
+      const visible = galeriaExtendida.style.display === 'block';
+      galeriaExtendida.style.display = visible ? 'none' : 'block';
+      verMasBtn.textContent = visible ? 'Ver más' : 'Ver menos';
+    });
+  }
+});

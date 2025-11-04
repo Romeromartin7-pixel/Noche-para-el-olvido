@@ -278,3 +278,56 @@ body.theme-green h6 {
      0 0 16px #00ff99,
      0 0 24px #00ff99; /* borde negro + brillo verde */
 }
+/* --- Galería extendida y botón Ver más --- */
+.ver-mas-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.btn-neon {
+  background: transparent;
+  color: white;
+  font-family: "DK Longreach", sans-serif;
+  font-size: 1.2rem;
+  padding: 0.6rem 1.5rem;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-neon:hover {
+  color: #00ff99;
+  border-color: #00ff99;
+  box-shadow: 0 0 18px #00ff99;
+}
+
+.galeria-extendida {
+  display: none;
+  margin-top: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1.5rem;
+  border-radius: 10px;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.galeria-extendida h3 {
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 3px #000;
+  margin-bottom: 1rem;
+}
+
+.video-galeria iframe {
+  margin-top: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 255, 150, 0.5);
+}
+
+/* Animación suave al aparecer */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
