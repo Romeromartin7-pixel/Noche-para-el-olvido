@@ -248,3 +248,33 @@ footer {
     height: 80px;
   }
 }
+/* ----- ESTILO DE TÍTULOS CON BORDE NEGRO Y LETRA BLANCA ----- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "DK Longreach", sans-serif;
+  color: #fff; /* blanco */
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000; /* borde negro */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ----- TÍTULOS EN TEMA VERDE: VERDE NEÓN + BORDE NEGRO ----- */
+body.theme-green h1,
+body.theme-green h2,
+body.theme-green h3,
+body.theme-green h4,
+body.theme-green h5,
+body.theme-green h6 {
+  color: #a8ff98; /* verde neón */
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000,
+     0 0 8px #00ff99,
+     0 0 16px #00ff99,
+     0 0 24px #00ff99; /* borde negro + brillo verde */
+}
