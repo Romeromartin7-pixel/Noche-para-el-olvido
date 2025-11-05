@@ -88,3 +88,30 @@ lightboxActores.addEventListener('click', (e) => {
   }
 });
 
+// ---------------- VIDEO LIGHTBOX ----------------
+const videoLightbox = document.getElementById('video-lightbox');
+const videoFrame = document.getElementById('video-frame');
+const videoCloseBtn = videoLightbox.querySelector('.close');
+
+document.querySelectorAll('.video-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const videoURL = item.getAttribute('data-video');
+    videoFrame.src = videoURL + "?autoplay=1";
+    videoLightbox.style.display = 'flex';
+  });
+});
+
+videoCloseBtn.addEventListener('click', () => {
+  videoLightbox.style.display = 'none';
+  videoFrame.src = '';
+});
+
+videoLightbox.addEventListener('click', (e) => {
+  if (e.target === videoLightbox) {
+    videoLightbox.style.display = 'none';
+    videoFrame.src = '';
+  }
+});
+
+
+

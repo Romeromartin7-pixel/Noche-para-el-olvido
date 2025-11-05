@@ -52,15 +52,15 @@
   <div class="actores-grid">
     <div class="actor">
       <img src="imagenes/actor1.JPG" alt="Nombre Actor 1">
-      <p>Tomas Feuermann - Mati</p>
+      <p>Mati <br> (Tomas Feuermann) </p>
     </div>
     <div class="actor">
       <img src="imagenes/actor2.JPG" alt="Nombre Actor 2">
-      <p>Francisco Figliuolo - Nico </p>
+      <p>Nico <br> (Francisco Figliuolo)</p>
     </div>
     <div class="actor">
       <img src="imagenes/actor3.JPG" alt="Nombre Actor 3">
-      <p>Leo Luque - Secuestrador</p>
+      <p>Jefe del secuestro <br>(Leo Luque)</p>
     </div>
     <!-- Agregá más actores siguiendo el mismo patrón -->
   </div>
@@ -103,23 +103,40 @@
       <img src="imagenes/backstage5.JPG" alt="Rodaje extra 5">
     </div>
 
-    <h3>Videos del detrás de escena</h3>
-    <div class="video-galeria">
-      <iframe 
-        width="100%" height="200"
-        src="https://www.youtube.com/embed/VIDEO_ID1"
-        title="Making Of - Otra Noche para el Olvido"
-        frameborder="0" allowfullscreen>
-      </iframe>
+   <!-- Sección Videos / Detrás de escenas -->
+<section id="videos">
+  <h2>Detrás de escenas / Bloopers</h2>
+  <p>Disfrutá de los videos del rodaje y momentos divertidos.</p>
 
-      <iframe 
-        width="100%" height="200"
-        src="https://www.youtube.com/embed/VIDEO_ID2"
-        title="Bloopers - Otra Noche para el Olvido"
-        frameborder="0" allowfullscreen>
-      </iframe>
+  <div class="video-carousel">
+    <!-- Miniatura 1 -->
+    <div class="video-item" data-video="https://www.youtube.com/embed/VIDEO_ID_1">
+      <img src="imagenes/video1-thumb.jpg" alt="Video 1">
+      <span class="play-button">&#9658;</span>
     </div>
+
+    <!-- Miniatura 2 -->
+    <div class="video-item" data-video="https://www.youtube.com/embed/VIDEO_ID_2">
+      <img src="imagenes/video2-thumb.jpg" alt="Video 2">
+      <span class="play-button">&#9658;</span>
+    </div>
+
+    <!-- Miniatura 3 -->
+    <div class="video-item" data-video="https://www.youtube.com/embed/VIDEO_ID_3">
+      <img src="imagenes/video3-thumb.jpg" alt="Video 3">
+      <span class="play-button">&#9658;</span>
+    </div>
+
+    <!-- Agregá más videos según necesites -->
   </div>
+</section>
+
+<!-- Lightbox para videos -->
+<div id="video-lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <iframe id="video-frame" width="80%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+
 </section>
   <!-- Lightbox -->
   <div id="lightbox" class="lightbox">
