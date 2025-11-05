@@ -64,3 +64,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+// ----- LIGHTBOX ACTORES -----
+const lightboxActores = document.getElementById('lightbox-actores');
+const lightboxImgActores = document.getElementById('lightbox-img-actores');
+const closeActores = document.querySelector('.close-actores');
+
+document.querySelectorAll('.actor img').forEach(img => {
+  img.addEventListener('click', () => {
+    lightboxActores.style.display = 'flex';
+    lightboxImgActores.src = img.src;
+  });
+});
+
+// Cerrar al click en la X
+closeActores.addEventListener('click', () => {
+  lightboxActores.style.display = 'none';
+});
+
+// Cerrar al click fuera de la imagen
+lightboxActores.addEventListener('click', (e) => {
+  if (e.target === lightboxActores) {
+    lightboxActores.style.display = 'none';
+  }
+});
+
