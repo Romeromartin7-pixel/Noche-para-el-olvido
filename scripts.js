@@ -88,6 +88,42 @@ lightboxActores.addEventListener('click', (e) => {
   }
 });
 
+let currentImageIndex = 0;
+let images = [];
+
+function openModal(element) {
+  const modal = document.getElementById("galleryModal");
+  const modalImg = document.getElementById("modalImage");
+  images = Array.from(document.querySelectorAll(".gallery-img"));
+  currentImageIndex = images.indexOf(element);
+
+  modal.style.display = "block";
+  modalImg.src = element.src;
+}
+
+function closeModal() {
+  document.getElementById("galleryModal").style.display = "none";
+}
+
+function changeImage(direction) {
+  currentImageIndex += direction;
+
+  if (currentImageIndex >= images.length) currentImageIndex = 0;
+  if (currentImageIndex < 0) currentImageIndex = images.length - 1;
+
+  const modalImg = document.getElementById("modalImage");
+  modalImg.src = images[currentImageIndex].src;
+}
+
+// Navegación con teclado
+document.addEventListener("keydown", (event) => {
+  const modal = document.getElementById("galleryModal");
+  if (modal.style.display === "block") {
+    if (event.key === "ArrowRight") changeImage(1);
+    if (event.key === "ArrowLeft") changeImage(-1);
+    if (event.key === "Escape") closeModal();
+  }
+});
 
 
 
