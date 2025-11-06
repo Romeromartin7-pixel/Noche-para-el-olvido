@@ -16,7 +16,7 @@
     <nav>
       <ul>
         <li><a href="#sinopsis">Sinopsis</a></li>
-        <li><a href="#Backstage">Backstage</a></li>
+        <li><a href="#galeria">Backstage</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
@@ -26,6 +26,7 @@
   <!-- Sección principal con el video -->
   <section class="hero">
     <h1 class="titulo-principal">OTRA NOCHE PARA EL OLVIDO</h1>
+    <h2><p>Teaser</p></h2>
     <div class="video-container">
       <iframe 
         width="100%" height="400"
@@ -46,6 +47,19 @@
         Capturados por figuras enmascaradas, los hermanos deberán dejar atrás sus diferencias y trabajar juntos si quieren liberarse.</p>
   </section>
 
+  <section id="trailer">
+    <h2 class="titulo-seccion">Trailer Oficial</h2>
+    <div class="video-container">
+      <iframe
+      width="100%" height="400"
+      src="https://drive.google.com/file/d/1UaDo9DQf46c1mUnXAQX1fyC4jrv9_81I/preview"
+      title="Otra noche para el olvido (trailer)"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
   <!-- Actores -->
 <section id="actores">
   <h2>Actores</h2>
@@ -108,24 +122,34 @@
   <h2>Detrás de escenas / Bloopers</h2>
   <p>Disfrutá de los videos del rodaje y momentos divertidos.</p>
 
-  <div class="video-carousel">
-    <!-- Miniatura 1 -->
-    <div class="video-item" data-video="https://www.youtube.com/embed/VIDEO_ID_1">
-      <img src="imagenes/video1-thumb.jpg" alt="Video 1">
-      <span class="play-button">&#9658;</span>
-    </div>
+ <div class="video-carousel">
+  <div class="video-item" onclick="openDriveVideo('1UaDo9DQf46c1mUnXAQX1fyC4jrv9_81I')">
+    <img src="https://drive.google.com/thumbnail?id=1UaDo9DQf46c1mUnXAQX1fyC4jrv9_81I" alt="Video 1" class="video-thumb">
+    <span class="play-button">&#9658;</span>
+  </div>
+</div>
+
+
+<!-- Modal para reproducir el video -->
+<div id="driveVideoModal" class="modal">
+  <span class="close" onclick="closeDriveVideo()">&times;</span>
+  <div class="modal-content">
+    <iframe id="driveVideoFrame" src="" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+  </div>
+</div>
 
     <!-- Miniatura 2 -->
+    <!-- por si hay mas bloopers a futuro 
     <div class="video-item" data-video="https://www.youtube.com/embed/VIDEO_ID_2">
       <img src="imagenes/video2-thumb.jpg" alt="Video 2">
       <span class="play-button">&#9658;</span>
     </div>
 
-    <!-- Miniatura 3 -->
+     Miniatura 3 
     <div class="video-item" data-video="https://www.youtube.com/embed/VIDEO_ID_3">
       <img src="imagenes/video3-thumb.jpg" alt="Video 3">
       <span class="play-button">&#9658;</span>
-    </div>
+    </div> -->
 
     <!-- Agregá más videos según necesites -->
   </div>
@@ -177,7 +201,49 @@
     <img src="imagenes/render-lampara.png" alt="Lámpara animada" class="lampara">
   </div>
 
-  <!-- Scripts -->
-  <script src="scripts.js"></script>
+     <!-- Scripts -->
+  <script src="scripts.js"></script>  
+
+  <script>
+  // ✅ Abre el video de Google Drive con animación
+  function openDriveVideo(videoId) {
+    const modal = document.getElementById('driveVideoModal');
+    const iframe = document.getElementById('driveVideoFrame');
+    iframe.src = `https://drive.google.com/file/d/${videoId}/preview`;
+    modal.classList.add('show');
+  }
+
+  // ✅ Cierra el video con fade-out suave
+  function closeDriveVideo() {
+    const modal = document.getElementById('driveVideoModal');
+    const iframe = document.getElementById('driveVideoFrame');
+    modal.classList.remove('show');
+    setTimeout(() => {
+      iframe.src = '';
+      modal.style.display = 'none';
+    }, 400); // coincide con el transition del CSS
+  }
+
+  // ✅ Controla clic fuera del video
+  window.addEventListener('click', (event) => {
+    const modal = document.getElementById('driveVideoModal');
+    if (event.target === modal) {
+      closeDriveVideo();
+    }
+  });
+
+  // ✅ Mantiene display:flex al mostrar con animación
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.attributeName === 'class') {
+        const modal = mutation.target;
+        if (modal.classList.contains('show')) {
+          modal.style.display = 'flex';
+        }
+      }
+    });
+  });
+  observer.observe(document.getElementById('driveVideoModal'), { attributes: true });
+  </script>
 </body>
 </html>
