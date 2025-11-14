@@ -836,4 +836,35 @@ body.theme-green h6 {
   max-width: 100% !important;
   min-width: 100% !important;
 }
+/* FIX GENERAL – VIDEO HORIZONTAL 16:9 */
+.video-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+/* Forzar al embed a ocupar todo el contenedor */
+.video-container * {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 🚀 FIX ESPECIAL PARA CELULAR (altura extra para que Instagram no corte el video) */
+@media (max-width: 600px) {
+  .video-container {
+    aspect-ratio: auto;        /* quitamos la relación fija */
+    height: 60vw;              /* altura dinámica según el ancho del teléfono */
+    max-height: 300px;         /* opcional: límite para no ocupar toda la pantalla */
+  }
+}
 
