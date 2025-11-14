@@ -807,3 +807,33 @@ body.theme-green h6 {
     border-radius: 8px;
   }
 }
+
+/* FIX DEFINITIVO PARA EMBED DE INSTAGRAM (REEL VERTICAL) */
+.video-container {
+  width: 100%;
+  max-width: 450px;   /* ajustá el ancho en PC: 450 = tamaño Instagram real */
+  margin: 0 auto;
+  aspect-ratio: 9/16; /* proporción vertical */
+  background: #000;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+/* Instagram mete muchos elementos internos; obligamos a ocupar 100% */
+.video-container * {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Evitar que instagram fuerce alturas extra */
+.instagram-media {
+  max-width: 100% !important;
+  min-width: 100% !important;
+}
+
