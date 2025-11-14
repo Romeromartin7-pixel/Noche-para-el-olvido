@@ -761,3 +761,49 @@ body.theme-green h6 {
   border-radius: 10px;
 }
 
+/* Contenedor responsivo para Instagram Reel (vertical 9:16) */
+.video-container {
+  width: 100%;
+  max-width: 720px;        /* ancho máximo en PC; cambiá a 540px si lo querés más chico */
+  margin: 20px auto;       /* centrado */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.45);
+  background: #000;
+  display: block;
+  /* Usamos aspect-ratio para mantener proporción 9:16 (vertical) */
+  aspect-ratio: 9 / 16;
+}
+
+/* Forzar que el embed de Instagram ocupe todo el contenedor */
+.video-container blockquote.instagram-media,
+.video-container blockquote.instagram-media > div,
+.video-container iframe,
+.video-container > div {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Ajustes para pantallas grandes: permitir que el video sea más alto */
+@media (min-width: 1200px) {
+  .video-container {
+    max-width: 900px;      /* opcional: aumenta tamaño en pantallas muy anchas */
+    aspect-ratio: 9 / 16;
+  }
+}
+
+/* Ajustes móviles: hacerlo más alto en pantallas chicas para mejor visual */
+@media (max-width: 480px) {
+  .video-container {
+    max-width: 100%;
+    aspect-ratio: 9 / 16;
+    margin: 12px 0;
+    border-radius: 8px;
+  }
+}
