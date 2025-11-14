@@ -956,3 +956,23 @@ body.theme-green h6 {
     height: 300px;
   }
 }
+/* ===== TRAILER GENERAL ===== */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;   /* control en PC */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 700px; /* Altura grande para PC */
+}
+
+/* ===== PARA CELULAR ===== */
+@media (max-width: 768px) {
+  .video-container iframe {
+    height: 350px; /* Ajuste perfecto para móviles */
+  }
+}
