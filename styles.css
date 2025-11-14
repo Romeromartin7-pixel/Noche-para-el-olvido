@@ -867,4 +867,34 @@ body.theme-green h6 {
     max-height: 300px;         /* opcional: límite para no ocupar toda la pantalla */
   }
 }
+/* --- VIDEO HORIZONTAL INSTAGRAM: PC --- */
+.video-container {
+  width: 100%;
+  max-width: 900px;     /* Ajustá el tamaño en PC acá */
+  margin: 0 auto;
+  aspect-ratio: 16 / 9; /* Proporción perfecta horizontal */
+  background: #000;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+/* Forzar al embed a llenarlo */
+.video-container * {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* --- FIX PARA CELULAR: mantener altura correcta --- */
+@media (max-width: 600px) {
+  .video-container {
+    aspect-ratio: 16 / 9;  /* Mantenemos 16:9 también en móvil */
+    max-width: 100%;
+    border-radius: 8px;
+  }
+}
 
